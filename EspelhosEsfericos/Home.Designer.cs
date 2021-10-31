@@ -238,14 +238,14 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(42)))), ((int)(((byte)(74)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(78, 133);
+            this.textBox1.Location = new System.Drawing.Point(78, 130);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 40);
+            this.textBox1.Size = new System.Drawing.Size(277, 50);
             this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "Insira os dois valores que já possui, para descobrir a incógnita que deseja.";
+            this.textBox1.Text = "Insira os dois valores que já possui para descobrir a incógnita que deseja.";
             // 
             // Home
             // 

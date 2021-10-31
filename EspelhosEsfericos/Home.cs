@@ -61,20 +61,26 @@ namespace EspelhosEsfericos
             //Caso tenha mais de dois campos nulos, o programa emitirá um aviso
             if (nulo >= 2)
             {
-                MessageBox.Show("São necessários no mínimo dois valores para que o cálculo seja realizado!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("São necessários no mínimo dois valores para que o cálculo seja realizado!", "Campos vazios!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Erase();
+            }
+            else if (nulo == 0)
+            {
+                MessageBox.Show("São necessários apenas dois valores para que o cálculo seja realizado!", "Campo preenchido a mais!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Erase();
             }
             else
             {
                 //Verificação de qual campo está vazio para definir a incognita
-                if (txtFocal.Text != "" && txtObjeto.Text != "")
+                if (txtImagem.Text == "")
                 {
                     incognita = "imagem";
                 }
-                else if (txtFocal.Text != "" && txtImagem.Text != "")
+                else if (txtObjeto.Text == "")
                 {
                     incognita = "objeto";
                 }
-                else if (txtObjeto.Text != "" && txtImagem.Text != "")
+                else if (txtFocal.Text == "")
                 {
                     incognita = "focal";
                 }
@@ -142,7 +148,6 @@ namespace EspelhosEsfericos
                 e.Handled = true;
             }
 
-            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
@@ -157,7 +162,20 @@ namespace EspelhosEsfericos
                 e.Handled = true;
             }
 
-            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtImagem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
@@ -166,8 +184,11 @@ namespace EspelhosEsfericos
 
         private void btnAbout_Click_1(object sender, EventArgs e)
         {
-            About about = new About();
-            about.Show();
+            if ((Application.OpenForms["About"] as About) == null)
+            {
+                About about = new About();
+                about.Show();
+            }
         }
 
         private void btnErase_Click(object sender, EventArgs e)
@@ -180,10 +201,6 @@ namespace EspelhosEsfericos
 
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void txtImagem_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

@@ -21,7 +21,7 @@ namespace EspelhosEsfericos
 
         private void LoadNextImage()
         {
-            if(imageNumber == 5)
+            if(imageNumber == 6)
             {
                 imageNumber = 0;
             }
@@ -34,7 +34,7 @@ namespace EspelhosEsfericos
         {
             if (imageNumber == 1)
             {
-                imageNumber = 6;
+                imageNumber = 7;
             }
 
             imageNumber--;
@@ -48,8 +48,9 @@ namespace EspelhosEsfericos
                 case 1: txtNome.Text = "Nicholas M. A. Costa"; txtDesc.Text = "Desenvolvedor do algoritmo e aplicativo Windows"; break;
                 case 2: txtNome.Text = "Mariana G. Souza"; txtDesc.Text = "Desenvolvedora da apresentação de slides"; break;
                 case 3: txtNome.Text = "Maria Eduarda N. Silva"; txtDesc.Text = "Desenvolvedora da logo e apresentação de slides"; break;
-                case 4: txtNome.Text = "João V. S. Santos"; txtDesc.Text = "Auxiliar criativo no desenvovimento do front-end"; break;
+                case 4: txtNome.Text = "João Vitor S. Santos"; txtDesc.Text = "Auxiliar criativo no desenvovimento do front-end"; break;
                 case 5: txtNome.Text = "Pedro L. F. Filho"; txtDesc.Text = "Desenvolvedor Web do site"; break;
+                case 6: txtNome.Text = "Gustavo R. Medeiros"; txtDesc.Text = "Realização da pesquisa referente a apresentação"; break;
             }
         }
 
@@ -62,6 +63,7 @@ namespace EspelhosEsfericos
                 case 3: System.Diagnostics.Process.Start("https://www.instagram.com/dudaens_/"); break;
                 case 4: System.Diagnostics.Process.Start("https://www.instagram.com/jvs4nt/"); break;
                 case 5: System.Diagnostics.Process.Start("https://www.instagram.com/pedrofranca_br/"); break;
+                case 6: System.Diagnostics.Process.Start("https://www.instagram.com/guss_012/"); break;
             }
             
         }
