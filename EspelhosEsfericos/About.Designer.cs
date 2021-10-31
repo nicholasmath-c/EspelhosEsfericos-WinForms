@@ -187,8 +187,10 @@
             this.Controls.Add(this.slidePic);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sobre Nós";
             ((System.ComponentModel.ISupportInitialize)(this.slidePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
